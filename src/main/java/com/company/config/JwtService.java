@@ -28,20 +28,20 @@ public class JwtService {
         return claimsResolver.apply(claims);
     }
 
-    public String generateToken(UserDetails userDetails) {
+    public String generateToken(String userDetails) {
         return generateToken(new HashMap<>(), userDetails);
     }
 
 
     public String generateToken(
             Map<String, Object> extraClaims,
-            UserDetails userDetails
+            String userDetails
     ) {
         long expirationMillis = System.currentTimeMillis() + 24 * 60 * 60 * 1000;
         return Jwts
                 .builder()
                 .setClaims(extraClaims)
-                .setSubject(userDetails.getUsername())
+                .setSubject(userDetails)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(expirationMillis))
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)

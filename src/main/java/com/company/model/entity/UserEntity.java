@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -21,17 +22,21 @@ import java.util.Collection;
 @NoArgsConstructor
 @Entity
 @Table(name = "_user")
+@DynamicInsert
 public class UserEntity implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private String lastName;
-    @Email
 
+    @Email
+    @Column(unique = true)
     private String email;
 
     private String password;
@@ -39,7 +44,7 @@ public class UserEntity implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @Column(name = "state",columnDefinition = "boolean default true")
+    @Column(name = "state", columnDefinition = "boolean default true")
     private Boolean state;
 
     @CreationTimestamp
@@ -49,7 +54,6 @@ public class UserEntity implements UserDetails {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private Timestamp updatedAt;
-
 
 
     @Override
