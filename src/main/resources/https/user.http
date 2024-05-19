@@ -1,0 +1,47 @@
+POST http://localhost:8082/api/v1/user/sign-up
+Content-Type: application/json
+
+{
+  "firstName": "jahongir",
+  "lastName": "azimov",
+  "email": "jahongir0744@gmail.com",
+  "password": "321",
+  "role": "ADMIN"
+}
+
+###
+POST http://localhost:8082/api/v1/user/sign-in
+Content-Type: application/json
+
+{
+  "field": "jahongir0744@gmail.com",
+  "object": "321"
+}
+
+###
+GET http://localhost:8082/api/v1/user/get/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpcjA3NDRAZ21haWwuY29tIiwiaWF0IjoxNzE2MTIzODM4LCJleHAiOjE3MTYyMTAyMzh9.CP65kjUWQvLzryu8W_sqFS4DV83BPUcX5uyo_4ftobs
+
+###
+GET http://localhost:8082/api/v1/user/list?page=0&size=10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpcjA3NDRAZ21haWwuY29tIiwiaWF0IjoxNzE2MTIzODM4LCJleHAiOjE3MTYyMTAyMzh9.CP65kjUWQvLzryu8W_sqFS4DV83BPUcX5uyo_4ftobs
+
+###
+PUT http://localhost:8082/api/v1/user/update/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpcjA3NDRAZ21haWwuY29tIiwiaWF0IjoxNzE2MTIzODM4LCJleHAiOjE3MTYyMTAyMzh9.CP65kjUWQvLzryu8W_sqFS4DV83BPUcX5uyo_4ftobs
+
+{
+  "firstName": "john",
+  "lastName": "boss",
+  "email": "jahongir@gmail.com",
+  "password": "321",
+  "role": "USER"
+}
+
+###
+DELETE http://localhost:8082/api/v1/user/delete/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpcjA3NDRAZ21haWwuY29tIiwiaWF0IjoxNzE2MTIzODM4LCJleHAiOjE3MTYyMTAyMzh9.CP65kjUWQvLzryu8W_sqFS4DV83BPUcX5uyo_4ftobs
