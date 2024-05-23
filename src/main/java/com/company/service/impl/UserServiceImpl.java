@@ -1,8 +1,5 @@
 package com.company.service.impl;
 
-import com.company.auth.AuthenticationRequest;
-import com.company.auth.AuthenticationResponse;
-import com.company.auth.RegisterRequest;
 import com.company.config.JwtService;
 import com.company.enums.Role;
 import com.company.mapper.UserMapper;
@@ -44,41 +41,6 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
 
-    public AuthenticationResponse register(RegisterRequest request) {
-
-//        var user = UserEntity.builder()
-//                .firstName(request.getFirstname())
-//                .lastName(request.getLastname())
-//                .email(request.getEmail())
-//                .password(passwordEncoder.encode(request.getPassword()))
-//                .role(request.getRole())
-//                .build();
-//        userRepository.save(user);
-//        var jwtToken = jwtService.generateToken(user);
-//        return AuthenticationResponse.builder()
-//                .token(jwtToken)
-//                .build();
-        return null;
-    }
-
-    @Override
-    public AuthenticationResponse authenticate(AuthenticationRequest request) {
-//        authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                        request.getEmail(),
-//                        request.getPassword()
-//                )
-//        );
-//        var user = userRepository.findByEmail(request.getEmail())
-//                .orElseThrow();
-//        var jwtToken = jwtService.generateToken(user);
-//        return AuthenticationResponse
-//                .builder()
-//                .token(jwtToken)
-//                .build();
-        return null;
-    }
-
     @Override
     public ResponseEntity<?> signUp(UserForm userForm) {
 
@@ -114,15 +76,11 @@ public class UserServiceImpl implements UserService {
         Optional<UserEntity> email =
                 userRepository.findByEmail(baseForm.getField());
 
-        System.out.println("00-0");
-
         Authentication auth = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         baseForm.getField(),
                         baseForm.getObject())
         );
-
-        System.out.println("au " + auth);
 
         if (email.isEmpty()) {
             log.warn("There is no user with this email");
@@ -157,7 +115,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<?> getUser(int id) {
+    public ResponseEntity<?> getUser(Integer id) {
 
         ResponseDto<?> response;
 
@@ -192,7 +150,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<?> updateUser(int id, UserForm userForm) {
+    public ResponseEntity<?> updateUser(Integer id, UserForm userForm) {
 
         ResponseDto<?> response;
 
@@ -201,6 +159,7 @@ public class UserServiceImpl implements UserService {
                     userForm.getLastName(), userForm.getEmail(),
                     passwordEncoder.encode(userForm.getPassword()),
                     Role.valueOf(userForm.getRole()), id);
+            log.info("User updated successfully");
             response = baseService.convertResponseDto(null, "User updated successfully", true, 200);
             return ResponseEntity.status(200).body(response);
 
@@ -213,7 +172,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<?> deleteUser(int id) {
+    public ResponseEntity<?> deleteUser(Integer id) {
 
         ResponseDto<?> response;
 

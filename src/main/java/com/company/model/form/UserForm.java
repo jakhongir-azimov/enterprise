@@ -17,13 +17,13 @@ public class UserForm {
 
     private String lastName;
 
-    @NotEmpty(message = "Email must not be empty")
+    @NotEmpty(message = "Email must not be empty and NULL")
     private String email;
 
-    @NotEmpty(message = "Password must not be empty")
+    @NotEmpty(message = "Password must not be empty and NULL")
     private String password;
 
-    @NotEmpty(message = "Role must not be empty")
+    @NotEmpty(message = "Role must not be empty and NULL")
     private String role;
 
 }

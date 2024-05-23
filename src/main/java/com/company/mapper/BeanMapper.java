@@ -8,6 +8,16 @@ import org.springframework.context.annotation.Configuration;
 public class BeanMapper {
 
     @Bean
+    public DepartmentMapper departmentMapper() {
+        return Mappers.getMapper(DepartmentMapper.class);
+    }
+
+    @Bean
+    public EmployeeMapper employeeMapper() {
+        return Mappers.getMapper(EmployeeMapper.class);
+    }
+
+    @Bean
     public UserMapper userMapper() {
         return Mappers.getMapper(UserMapper.class);
     }

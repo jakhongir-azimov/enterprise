@@ -44,14 +44,15 @@ public class UserController {
     @PreAuthorize("hasAuthority('admin:read')")
     @GetMapping("/get/{id}")
     public ResponseEntity<?> getUser(
-            @PathVariable("id") int id
+            @PathVariable("id") Integer id
     ) {
         log.info("Get user by id {}", id);
         return userService.getUser(id);
     }
 
     @Operation(
-            description = "Get list users"
+            description = "Get list users",
+            summary = "get list endpoint of users"
     )
     @PreAuthorize("hasAuthority('admin:read')")
     @GetMapping("/list")
@@ -70,7 +71,7 @@ public class UserController {
     @PreAuthorize("hasAuthority('admin:update')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> updateUser(
-            @PathVariable("id") int id,
+            @PathVariable("id") Integer id,
             @Valid @RequestBody UserForm userForm
     ) {
         log.info("User updating with id {}", id);
@@ -84,7 +85,7 @@ public class UserController {
     @PreAuthorize("hasAuthority('admin:delete')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteUser(
-            @PathVariable("id") int id
+            @PathVariable("id") Integer id
     ) {
         log.info("User deleting by id {}", id);
         return userService.deleteUser(id);

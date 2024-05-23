@@ -1,4 +1,4 @@
-package com.company.auth;
+package com.company.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationRequest {
+public class DepartmentDto {
 
-    private String email;
-    String password;
+    private Integer id;
+
+    private String name;
+
 }

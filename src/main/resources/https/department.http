@@ -1,47 +1,33 @@
-POST http://localhost:8082/api/v1/user/sign-up
-Content-Type: application/json
-
-{
-  "firstName": "jahongir",
-  "lastName": "azimov",
-  "email": "jahongir0744@gmail.com",
-  "password": "321",
-  "role": "ADMIN"
-}
-
-###
-POST http://localhost:8082/api/v1/user/sign-in
-Content-Type: application/json
-
-{
-  "field": "jahongir@gmail.com",
-  "object": "321"
-}
-
-###
-GET http://localhost:8082/api/v1/user/get/1
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
-
-###
-GET http://localhost:8082/api/v1/user/list?page=0&size=10
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
-
-###
-PUT http://localhost:8082/api/v1/user/update/1
+POST http://localhost:8082/api/v1/department/add
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
 
 {
-  "firstName": "john",
-  "lastName": "boss",
-  "email": "jahongir@gmail.com",
-  "password": "321",
-  "role": "ADMIN"
+  "name": "D Block"
 }
 
 ###
-DELETE http://localhost:8082/api/v1/user/delete/1
+GET http://localhost:8082/api/v1/department/get/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+###
+GET http://localhost:8082/api/v1/department/list?page=0&size=10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+###
+PUT http://localhost:8082/api/v1/department/update/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+{
+  "name": "updated now"
+}
+
+###
+DELETE http://localhost:8082/api/v1/department/delete/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+

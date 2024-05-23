@@ -1,0 +1,56 @@
+POST http://localhost:8082/api/v1/employee/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+{
+  "firstName": "Chris",
+  "lastName": "Evans",
+  "patronymic": "Jon",
+  "age": 35,
+  "passportSeries": "AC",
+  "passportNumber": "00000005",
+  "jshshir": "0000005",
+  "nationality": "American",
+  "salary": 52000,
+  "address": "NY",
+  "departmentId": 2
+}
+
+###
+GET http://localhost:8082/api/v1/employee/get/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+###
+
+GET http://localhost:8082/api/v1/employee/list?page=0&size=10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+###
+PUT http://localhost:8082/api/v1/employee/update/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+{
+  "firstName": "Tom",
+  "lastName": "Hardy",
+  "patronymic": "Chris",
+  "age": 32,
+  "passportSeries": "AA",
+  "passportNumber": "00000001",
+  "jshshir": "00000005",
+  "nationality": "British",
+  "salary": 56000,
+  "address": "Cambridge",
+  "departmentId": 2
+}
+
+###
+DELETE http://localhost:8082/api/v1/employee/delete/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+
+
+
+
