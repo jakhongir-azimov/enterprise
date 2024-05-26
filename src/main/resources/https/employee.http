@@ -1,6 +1,6 @@
 POST http://localhost:8082/api/v1/employee/add
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY1NDYzMDcsImV4cCI6MTcxNjYzMjcwN30.Yi7RCHjz_Bscq6W4K3GAAr9sDHtSSpkEDE1ELZBdlmk
 
 {
   "firstName": "Chris",
@@ -8,8 +8,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iL
   "patronymic": "Jon",
   "age": 35,
   "passportSeries": "AC",
-  "passportNumber": "00000005",
-  "jshshir": "0000005",
+  "passportNumber": "00000006",
+  "jshshir": "0000006",
   "nationality": "American",
   "salary": 52000,
   "address": "NY",
@@ -17,9 +17,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iL
 }
 
 ###
-GET http://localhost:8082/api/v1/employee/get/1
+GET http://localhost:8082/api/v1/employee/get/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY2NTk2MzEsImV4cCI6MTcxNjc0NjAzMX0.9YpW6NY22UuZNnzzJ_0-EseXarMxr48VRxHYQlY0jXQ
 
 ###
 

@@ -1,0 +1,43 @@
+POST http://localhost:8082/api/v1/customer/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MTk2NzIsImV4cCI6MTcxNjgwNjA3Mn0.ZOOkEEG5AP1yJ6kCB8CNFIFVllw42OcX-lBBclUAPCE
+
+{
+  "firstName": "client_8",
+  "lastName": "client_8",
+  "passportSeries": "BB",
+  "passportNumber": "0000008",
+  "jshshir": "0000008",
+  "address": "Portugal",
+  "employeeId": 12
+}
+
+###
+GET http://localhost:8082/api/v1/customer/get/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY2NTk2MzEsImV4cCI6MTcxNjc0NjAzMX0.9YpW6NY22UuZNnzzJ_0-EseXarMxr48VRxHYQlY0jXQ
+
+###
+GET localhost:8082/api/v1/customer/list?page=0&size=5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY2NTk2MzEsImV4cCI6MTcxNjc0NjAzMX0.9YpW6NY22UuZNnzzJ_0-EseXarMxr48VRxHYQlY0jXQ
+
+###
+PUT localhost:8082/api/v1/customer/update/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY2NTk2MzEsImV4cCI6MTcxNjc0NjAzMX0.9YpW6NY22UuZNnzzJ_0-EseXarMxr48VRxHYQlY0jXQ
+
+{
+  "firstName": "James",
+  "lastName": "Gosling",
+  "passportSeries": "DD",
+  "passportNumber": "0000005",
+  "jshshir": "0000005",
+  "address": "Uzbekistan",
+  "employeeId": 3
+}
+
+###
+DELETE localhost:8082/api/v1/customer/delete/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY2NTk2MzEsImV4cCI6MTcxNjc0NjAzMX0.9YpW6NY22UuZNnzzJ_0-EseXarMxr48VRxHYQlY0jXQ

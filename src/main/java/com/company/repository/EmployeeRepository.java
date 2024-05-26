@@ -10,8 +10,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Integer> {
+
+    @Transactional(readOnly = true)
+    @Query("SELECT e FROM EmployeeEntity e WHERE e.id = ?1 AND e.state = true ")
+    Optional<EmployeeEntity> findEmployee(Integer employeeId);
+
     @Transactional(readOnly = true)
     @Query("SELECT e FROM EmployeeEntity e WHERE e.id = ?1 AND e.state = true ")
     EmployeeEntity findEmployeeById(Integer id);
@@ -31,5 +38,4 @@ public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Intege
     @Modifying
     @Query("UPDATE EmployeeEntity e SET e.state = false, e.passportNumber = ?1 WHERE e.id = ?2")
     void deleteEmployeeById(String newPassportNumber, Integer id);
-
 }

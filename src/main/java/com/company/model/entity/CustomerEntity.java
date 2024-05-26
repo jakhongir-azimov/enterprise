@@ -16,16 +16,32 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "department")
+@Table(name = "customer")
 @DynamicInsert
-public class DepartmentEntity {
+public class CustomerEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name", unique = true, nullable = false)
-    private String name;
+    private String firstName;
+
+    private String lastName;
+
+    @Column(name = "passport_series")
+    private String passportSeries;
+
+    @Column(name = "passport_number", unique = true, nullable = false)
+    private String passportNumber;
+
+    @Column(name = "JSHSHIR", unique = true, nullable = false)
+    private String jshshir;
+
+    private String address;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "employee_id", nullable = false)
+    private EmployeeEntity employee;
 
     @Column(name = "state", columnDefinition = "boolean default true")
     private Boolean state;
@@ -37,5 +53,6 @@ public class DepartmentEntity {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private Timestamp updatedAt;
+
 
 }
