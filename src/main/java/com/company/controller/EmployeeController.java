@@ -27,7 +27,7 @@ public class EmployeeController {
     @PreAuthorize("hasAuthority('admin:create')")
     @PostMapping("/add")
     public ResponseEntity<?> createEmployee(
-            @RequestBody EmployeeForm employeeForm
+            @Valid @RequestBody EmployeeForm employeeForm
     ) {
         log.info("Received create endpoint of employee request");
         return employeeService.addEmployee(employeeForm);

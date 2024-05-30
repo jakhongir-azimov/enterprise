@@ -21,7 +21,7 @@ public class CustomerForm {
     private String passportSeries;
 
     @NotEmpty(message = "Must not be empty and NULL")
-    @Pattern(regexp = "\\d{6,9}", message = "Passpot number must be between 6 and 9 digits")
+    @Pattern(regexp = "\\d{6,9}", message = "Passport number must be between 6 and 9 digits")
     private String passportNumber;
 
     @NotEmpty(message = "Must not be empty and NULL")

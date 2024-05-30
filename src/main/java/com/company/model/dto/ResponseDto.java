@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 @NoArgsConstructor
 @Component
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseDto<T> {
 
     private Boolean success;

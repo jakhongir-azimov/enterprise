@@ -27,8 +27,8 @@ public class CustomerController {
     @PreAuthorize("hasAuthority('admin:create')")
     @PostMapping("/add")
     public ResponseEntity<?> createCustomer(
-            @RequestBody CustomerForm customerForm
-            ) {
+            @Valid @RequestBody CustomerForm customerForm
+    ) {
         log.info("Received create endpoint of customer request");
         return customerService.addCustomer(customerForm);
     }
@@ -86,7 +86,6 @@ public class CustomerController {
         log.info("Received delete endpoint of customer");
         return customerService.deleteCustomer(id);
     }
-
 
 
 }

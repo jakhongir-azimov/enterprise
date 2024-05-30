@@ -27,7 +27,7 @@ public class DepartmentController {
     @PreAuthorize("hasAuthority('admin:create')")
     @PostMapping("/add")
     public ResponseEntity<?> createDepartment(
-            @RequestBody DepartmentForm departmentForm
+            @Valid @RequestBody DepartmentForm departmentForm
     ) {
         log.info("Received create endpoint of department request");
         return departmentService.addDepartment(departmentForm);

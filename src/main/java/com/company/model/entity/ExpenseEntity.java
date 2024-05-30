@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 
@@ -16,32 +15,23 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "customer")
+@Table(name = "expenses")
 @DynamicInsert
-public class CustomerEntity {
+public class ExpenseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
     private Integer id;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "ads_type")
+    private String adsType;
 
-    @Column(name = "last_name")
-    private String lastName;
+    private Double cost;
 
-    @Column(name = "passport_series")
-    private String passportSeries;
+    private Integer duration;
 
-    @Column(name = "passport_number", unique = true, nullable = false)
-    private String passportNumber;
-
-    @Column(name = "JSHSHIR", unique = true, nullable = false)
-    private String jshshir;
-
-    private String address;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "employee_id", nullable = false)
     private EmployeeEntity employee;
 
@@ -49,12 +39,7 @@ public class CustomerEntity {
     private Boolean state;
 
     @CreationTimestamp
-    @Column(name = "created_at")
+    @Column(name = "start_date")
     private Timestamp createdAt;
-
-    @UpdateTimestamp
-    @Column(name = "updated_at")
-    private Timestamp updatedAt;
-
 
 }
