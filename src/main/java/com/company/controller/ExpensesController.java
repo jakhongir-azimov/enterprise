@@ -1,7 +1,7 @@
 package com.company.controller;
 
 import com.company.model.form.ExpenseForm;
-import com.company.service.ExpenseService;
+import com.company.service.ExpensesService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/expense")
 @Slf4j
-@Tag(name = "Expense")
+@Tag(name = "Expenses")
 @AllArgsConstructor
-public class ExpenseController {
+public class ExpensesController {
 
-    private final ExpenseService expenseService;
+    private final ExpensesService expenseService;
 
     @Operation(
             description = "Add expense",

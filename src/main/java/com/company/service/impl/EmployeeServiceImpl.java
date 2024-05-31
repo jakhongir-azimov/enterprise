@@ -85,7 +85,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             return ResponseEntity.status(200).body(response);
         } catch (Exception e) {
             e.printStackTrace();
-            log.warn("Error retrieving all employees");
+            log.warn("Error retrieving all employees", e);
             response = baseService.convertResponseDto(null, "Interval Server Error", false, 500);
             return ResponseEntity.status(500).body(response);
 

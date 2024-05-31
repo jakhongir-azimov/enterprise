@@ -3,7 +3,7 @@ package com.company.service;
 import com.company.model.form.ExpenseForm;
 import org.springframework.http.ResponseEntity;
 
-public interface ExpenseService {
+public interface ExpensesService {
     ResponseEntity<?> addExpense(ExpenseForm expenseForm);
 
     ResponseEntity<?> getExpense(Integer id);

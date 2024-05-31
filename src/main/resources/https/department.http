@@ -1,9 +1,9 @@
 POST http://localhost:8082/api/v1/department/add
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
 
 {
-  "name": "D Block"
+  "name": "Manage"
 }
 
 ###

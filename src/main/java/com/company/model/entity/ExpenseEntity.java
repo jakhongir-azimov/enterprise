@@ -21,10 +21,9 @@ public class ExpenseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
     private Integer id;
 
-    @Column(name = "ads_type")
+    @Column(name = "ads_type", unique = true, nullable = false)
     private String adsType;
 
     private Double cost;

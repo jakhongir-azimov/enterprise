@@ -1,15 +1,38 @@
 POST http://localhost:8082/api/v1/expense/add
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MTk2NzIsImV4cCI6MTcxNjgwNjA3Mn0.ZOOkEEG5AP1yJ6kCB8CNFIFVllw42OcX-lBBclUAPCE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
 
 {
-  "adsType": "Instagram ads",
-  "cost": 1200.43,
-  "duration": 23,
-  "employeeId": 2
+  "adsType": "Google ads 1",
+  "cost": 4500.43,
+  "duration": 3,
+  "employeeId": 1
 }
 
 ###
-GET http://localhost:8082/api/v1/expense/get/1
+GET http://localhost:8082/api/v1/expense/get/4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY3MTk2NzIsImV4cCI6MTcxNjgwNjA3Mn0.ZOOkEEG5AP1yJ6kCB8CNFIFVllw42OcX-lBBclUAPCE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
+
+###
+GET http://localhost:8082/api/v1/expense/list?page=0&size=10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
+
+###
+PUT http://localhost:8082/api/v1/expense/update/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
+
+{
+  "adsType": "Instagram ads.",
+  "cost": 34000.11,
+  "duration": 14,
+  "employeeId": 1
+}
+
+###
+DELETE http://localhost:8082/api/v1/expense/delete/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
+

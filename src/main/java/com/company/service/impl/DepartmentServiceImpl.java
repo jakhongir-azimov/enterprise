@@ -1,11 +1,9 @@
 package com.company.service.impl;
 
 import com.company.mapper.DepartmentMapper;
-import com.company.mapper.EmployeeMapper;
 import com.company.model.dto.DepartmentDto;
 import com.company.model.dto.ResponseDto;
 import com.company.model.entity.DepartmentEntity;
-import com.company.model.entity.EmployeeEntity;
 import com.company.model.form.DepartmentForm;
 import com.company.repository.DepartmentRepository;
 import com.company.service.DepartmentService;
@@ -70,7 +68,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
         try {
             PageRequest pageable = PageRequest.of(page, size);
-            page1 = departmentRepository.findAllUsersWithStateTrue(pageable);
+            page1 = departmentRepository.findAllDepartmentWithStateTrue(pageable);
 
             List<DepartmentDto> dtos = page1.getContent().stream()
                     .map(departmentMapper::DEPARTMENT_DTO)

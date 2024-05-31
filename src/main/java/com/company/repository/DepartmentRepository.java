@@ -24,7 +24,7 @@ public interface DepartmentRepository extends JpaRepository<DepartmentEntity, In
 
     @Transactional
     @Query("SELECT d FROM DepartmentEntity d WHERE d.state = true ")
-    Page<DepartmentEntity> findAllUsersWithStateTrue(PageRequest pageable);
+    Page<DepartmentEntity> findAllDepartmentWithStateTrue(PageRequest pageable);
 
     @Transactional
     @Modifying

@@ -4,7 +4,7 @@ Content-Type: application/json
 {
   "firstName": "jahongir",
   "lastName": "azimov",
-  "email": "jon@gmail.com",
+  "email": "johangir0744@gmail.com",
   "password": "321",
   "role": "ADMIN"
 }
@@ -21,21 +21,21 @@ Content-Type: application/json
 ###
 GET http://localhost:8082/api/v1/user/get/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwNzcxMDEsImV4cCI6MTcxNzE2MzUwMX0.tantiASpWCU-cWBJS4h3LczUvuS0nqJ_tWYR_z0l2Vg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA2NDgsImV4cCI6MTcxNzE3NzA0OH0.05WhfBZtc2per6_7gH66h4mJ1CuqlBPTZcfWzusIG3o
 
 ###
 GET http://localhost:8082/api/v1/user/list?page=0&size=10
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwNzcxMDEsImV4cCI6MTcxNzE2MzUwMX0.tantiASpWCU-cWBJS4h3LczUvuS0nqJ_tWYR_z0l2Vg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2hhbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA1MzksImV4cCI6MTcxNzE3NjkzOX0.2Hln8yMJe1UG6koHA6Bx111YUTIGzCkNe533Q7Y33UY
 
 ###
 PUT http://localhost:8082/api/v1/user/update/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWhvbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NjM0ODcsImV4cCI6MTcxNjU0OTg4N30.FuTuT270m7aDElxhV8JEgxoEaO5FtmSK7Ey0VoqHhDg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2hhbmdpckBnbWFpbC5jb20iLCJpYXQiOjE3MTcwOTA1MzksImV4cCI6MTcxNzE3NjkzOX0.2Hln8yMJe1UG6koHA6Bx111YUTIGzCkNe533Q7Y33UY
 
 {
-  "firstName": "john",
-  "lastName": "boss",
+  "firstName": "jahongir",
+  "lastName": "azimov",
   "email": "jahongir@gmail.com",
   "password": "321",
   "role": "ADMIN"
